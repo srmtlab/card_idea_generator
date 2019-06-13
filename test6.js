@@ -36,6 +36,7 @@ console.log(orig_div);
 var parent = orig_div.parent();
 console.log(parent);
 for (item in cards){ 
+	console.log(item);
 	var url = item["url"];
 	console.log(url);
 	var div =orig_div.clone();
