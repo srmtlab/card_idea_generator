@@ -17,15 +17,17 @@ $(function(){
 					"title": json[i].title
 				});
 			};
+		
+	for(var i = 0; i < cards.length; i++){
+		alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
+	};
 		},
 		function(){
 			alert("error:ファイルの読み込みに失敗");
 		}
 	);
 	
-	for(var i = 0; i < cards.length; i++){
-		alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
-	};
+
 	
 });
 
@@ -43,4 +45,4 @@ for (item in cards){
 	console.log(img);
 	img.attr("src", url);
 	console.log(img);
-}:
+};
