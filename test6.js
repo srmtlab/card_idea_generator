@@ -1,5 +1,7 @@
 var cards = [];
 
+console.log("aaaaaa");
+// alert("aaaaaaaa");
 $(function(){
 	
 	$.ajax({
@@ -21,10 +23,27 @@ $(function(){
 		}
 	);
 	
-	$(".btn").on("click", function(){
-		for(var i = 0; i < cards.length; i++){
-			alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
-		}
-	});
+	for(var i = 0; i < cards.length; i++){
+		alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
+	};
 	
 });
+
+console.log(cards);
+
+var orig_div = $("div.swiper-slide");
+console.log(orig_div);
+var parent = orig_div.parent();
+console.log(parent);
+for (item in cards){ 
+	console.log(item);
+	var url = item["url"];
+	console.log(url);
+	var div =orig_div.clone();
+	console.log(div);
+	div.appendTo(parent);
+	var img = div.children("img");
+	console.log(img);
+	img.attr("src", url);
+	console.log(img);
+};

@@ -6,7 +6,9 @@
 <title>Swiper demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="test6.js"></script>
 
 <style>
     body {
@@ -30,12 +32,12 @@
     }
     .btn {
 	display: inline-block;
-	padding: 0.5em 1em;
+	padding: 0.5em 5.55em;
 	text-decoration: none;
 	background: #668ad8;/*ボタン色*/
 	color: #FFF;
-	border-bottom: solid 4px #627295;
-	border-radius: 3px;
+	border-bottom: solid 5px #627295;
+	border-radius: 5px;
     }
     .btn:active {
 	/*ボタンを押したとき*/
@@ -53,16 +55,16 @@
   <!-- このdivタグを画像ファイルの数だけ複製する -->
   <div class="swiper-slide">
     <img src="https://images-na.ssl-images-amazon.com/images/I/511GkWW4r0L._SX300_BO1,204,203,200_.jpg" width="180"/>
-    <textarea name="idea" rows="3" cols="20">ここにアイデアを記入してください</textarea>
+    <textarea name="idea" rows="3" cols="20" style="width:180px;">ここにアイデアを記入してください</textarea>
     <a href="#" class="btn">送信</a>
   </div>
-
-
+  
   <div class="swiper-slide">
     <img src="https://images-na.ssl-images-amazon.com/images/I/51a5BUBJOWL._SX310_BO1,204,203,200_.jpg" width="180"/>
     <textarea name="idea" rows="3" cols="20">ここにアイデアを記入してください</textarea>
     <a href="#" class="btn">送信</a>
   </div>
+
 
   
 </div>
@@ -71,7 +73,7 @@
 <div class="swiper-button-next"></div>
 </div>
 
-<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+<script src="js/swiper.min.js"></script>
 
 <script>
     var swiper = new Swiper('.swiper-container', {
