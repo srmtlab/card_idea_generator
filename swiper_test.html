@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="http:idangero.us/swiper/dist/css/swiper.min.css">
+
+<style>
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 550px;
+    }
+    .btn {
+	display: inline-block;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	background: #668ad8;/*ボタン色*/
+	color: #FFF;
+	border-bottom: solid 4px #627295;
+	border-radius: 3px;
+    }
+    .btn:active {
+	/*ボタンを押したとき*/
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);/*下に動く*/
+	border-bottom: none;/*線を消す*/
+    }
+  </style>
+</head>
+<body>
+
+<div class="swiper-container">
+<div class="swiper-wrapper">
+
+  <!-- このdivタグを画像ファイルの数だけ複製する -->
+  <div class="swiper-slide">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/511GkWW4r0L._SX300_BO1,204,203,200_.jpg" width="180"/>
+    <textarea name="idea" rows="3" cols="20">ここにアイデアを記入してください</textarea>
+    <a href="#" class="btn">送信</a>
+  </div>
+
+
+  <div class="swiper-slide">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51a5BUBJOWL._SX310_BO1,204,203,200_.jpg" width="180"/>
+    <textarea name="idea" rows="3" cols="20">ここにアイデアを記入してください</textarea>
+    <a href="#" class="btn">送信</a>
+  </div>
+
+  
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+
+<script src="http:idangero.us/swiper/dist/js/swiper.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'flip',
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
