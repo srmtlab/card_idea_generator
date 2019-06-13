@@ -29,13 +29,13 @@ $(function(){
 	
 });
 
-console.log(cards);
+console.log(cards[0]);
 
 var orig_div = $("div.swiper-slide");
 console.log(orig_div);
 var parent = orig_div.parent();
 console.log(parent);
-for (item in cards){ 
+for(var item in cards){ 
 	console.log(item);
 	var url = item["url"];
 	console.log(url);
