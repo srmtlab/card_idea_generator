@@ -21,10 +21,9 @@ $(function(){
 		}
 	);
 	
-	$(".btn").on("click", function(){
-		for(var i = 0; i < cards.length; i++){
-			alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
-		}
-	});
+	for(var i = 0; i < cards.length; i++){
+		alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
+	};
+	
 	
 });
