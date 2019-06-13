@@ -25,5 +25,14 @@ $(function(){
 		alert("Card's url is " + cards[i]["url"] + " and the title is a " + cards[i]["title"] + ".");
 	};
 	
-	
 });
+
+var orig_div = $("div.swiper-slide");
+var parent = orig_div.parent();
+for (item in cards){ 
+	var url = item["url"];
+	var div =orig_div.clone();
+	div.appendTo(parent);
+	var img = div.children("img");
+	img.attr("src", url);
+}:
