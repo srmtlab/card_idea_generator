@@ -1,7 +1,7 @@
 var cards = [];
 
 console.log("aaaaaa");
-alert("aaaaaaaa");
+// alert("aaaaaaaa");
 $(function(){
 	
 	$.ajax({
@@ -30,11 +30,17 @@ $(function(){
 });
 
 var orig_div = $("div.swiper-slide");
+console.log(orig_div);
 var parent = orig_div.parent();
+console.log(parent);
 for (item in cards){ 
 	var url = item["url"];
+	console.log(url);
 	var div =orig_div.clone();
+	console.log(div);
 	div.appendTo(parent);
 	var img = div.children("img");
+	console.log(img);
 	img.attr("src", url);
+	console.log(img);
 }:
