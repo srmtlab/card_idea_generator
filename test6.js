@@ -29,6 +29,8 @@ $(function(){
 	
 });
 
+console.log(cards);
+
 var orig_div = $("div.swiper-slide");
 console.log(orig_div);
 var parent = orig_div.parent();
