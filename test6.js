@@ -29,7 +29,7 @@ $(function(){
 	
 });
 
-console.log(cards);
+console.log(cards[0]);
 
 var orig_div = $("div.swiper-slide");
 console.log(orig_div);
