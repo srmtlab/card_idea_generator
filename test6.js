@@ -43,4 +43,4 @@ for (item in cards){
 	console.log(img);
 	img.attr("src", url);
 	console.log(img);
-}:
+};
