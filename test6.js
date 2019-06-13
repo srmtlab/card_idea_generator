@@ -1,6 +1,7 @@
 var cards = [];
 
 console.log("aaaaaa");
+alert("aaaaaaaa");
 $(function(){
 	
 	$.ajax({
