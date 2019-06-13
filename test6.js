@@ -4,7 +4,7 @@ $(function(){
 	
 	$.ajax({
 		type: "GET",
-		url: "cards.json",
+		url: "http://www.srmt.nitech.ac.jp/~siramatu/tmp/cards.json",
 		dataType: "json"
 	})
 	.then(
