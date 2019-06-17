@@ -6,77 +6,45 @@
 <title>Swiper demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="css/swiper.min.css">
+<!-- js,css読み込み -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="test6.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="test6.css">
 
-<style>
-    body {
-      background: #fff;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color:#000;
-      margin: 0;
-      padding: 0;
-    }
-    .swiper-container {
-      width: 300px;
-      height: 300px;
-      padding: 50px;
-    }
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 550px;
-    }
-    .btn {
-	display: inline-block;
-	padding: 0.5em 5.55em;
-	text-decoration: none;
-	background: #668ad8;/*ボタン色*/
-	color: #FFF;
-	border-bottom: solid 5px #627295;
-	border-radius: 5px;
-    }
-    .btn:active {
-	/*ボタンを押したとき*/
-	-webkit-transform: translateY(4px);
-	transform: translateY(4px);/*下に動く*/
-	border-bottom: none;/*線を消す*/
-    }
-  </style>
 </head>
 <body>
 
-<div class="swiper-container">
-<div class="swiper-wrapper">
+  <div class="container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
 
-  <!-- このdivタグを画像ファイルの数だけ複製する -->
-  <div class="swiper-slide">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/511GkWW4r0L._SX300_BO1,204,203,200_.jpg" width="180"/>
-    <textarea name="idea" rows="3" cols="20" style="width:180px;">ここにアイデアを記入してください</textarea>
-    <a href="#" class="btn">送信</a>
+        <!-- このdivタグを画像ファイルの数だけ複製する -->
+        <div class="swiper-slide">
+          <img class="img" src="">
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- ボタンと意見入力部分を隔離 -->
+    <div class="idea_div">
+      <textarea name="idea">ここにアイデアを記入してください</textarea>
+    </div>
+    <div class="btn_div">
+      <a href="#" class="btn">送信</a>
+    </div>
+
   </div>
-  
-  <div class="swiper-slide">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51a5BUBJOWL._SX310_BO1,204,203,200_.jpg" width="180"/>
-    <textarea name="idea" rows="3" cols="20">ここにアイデアを記入してください</textarea>
-    <a href="#" class="btn">送信</a>
-  </div>
-
 
   
-</div>
-<div class="swiper-pagination"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
-</div>
-
-<script src="js/swiper.min.js"></script>
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
+  <script src="js/swiper.min.js"></script>
+  
+  <script>
+    let swiper = new Swiper('.swiper-container', {
       effect: 'flip',
       grabCursor: true,
       pagination: {
@@ -90,3 +58,46 @@
   </script>
 </body>
 </html>
+
+<!-- 更新内容 20190617 -->
+<!--
+swiper_test.html
+修正内容が多くなってしまったのでここに内容を記述
+
+<head>部分
+・style部分をtest6.cssの外部ファイルに記述
+
+<body>部分
+・swiper-slideを1つ減らして計1つに
+・swiper部分から意見入力部分(textarea)とボタン(btn)をそれぞれ分離
+・textareaを内包するdiv idea_divを追加
+・btnを内包するdiv btn_divを追加
+・上に伴って、swiper-container、idea_div、btn_divのすべてを内包するdiv containerを追加
+
+
+test6.css
+各クラスに設定を付与し形を整えた
+(かなり適当に設定しているので変更が必要かもしれない)
+
+
+test6.js
+・確認用プログラム(console.logなど)を一度全消去
+・変数宣言をvarからletに変更
+・div swiper-slideの複製プログラムの変更
+・複製プログラムをajax処理の中へ移動
+・「送信」ボタンクリック時のテストプログラムを追加
+・画像上の矢印が視覚情報を邪魔するので、カーソルが画像にのった場合のみ表示に変更
+
+問題点(2019/06/17)
+・swiper.min.jsプログラム内で、用意されたswiper-slideにそれぞれ特別なクラスを追加しているらしく、
+　初期swiper-slideの単純な複製を行っているせいで、うまくswiperが作れない
+　(ページの大きさを変更すると、正しくなる)
+　・理想複製後
+　　<div class="swiper-slide swiper-slide-active"> img1 </div>
+　　<div class="swiper-slide swiper-slide-next"> img2 </div>
+　　<div class="swiper-slide swiper-slide-active"> img3 </div>
+　・実際
+　　<div class="swiper-slide swiper-slide-active"> img1 </div>
+　　<div class="swiper-slide swiper-slide-active"> img2 </div>
+　　<div class="swiper-slide swiper-slide-active"> img3 </div>
+-->
