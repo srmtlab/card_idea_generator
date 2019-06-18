@@ -42,24 +42,11 @@
 
   
   <script src="js/swiper.min.js"></script>
-  
-  <script>
-    let swiper = new Swiper('.swiper-container', {
-      effect: 'flip',
-      grabCursor: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
+
 </body>
 </html>
 
-<!-- 更新内容 20190617 -->
+<!-- 更新内容 20190618 -->
 <!--
 swiper_test.html
 修正内容が多くなってしまったのでここに内容を記述
@@ -73,6 +60,8 @@ swiper_test.html
 ・textareaを内包するdiv idea_divを追加
 ・btnを内包するdiv btn_divを追加
 ・上に伴って、swiper-container、idea_div、btn_divのすべてを内包するdiv containerを追加
+
+・(new)body下の方にあったswiper宣言をtest6.jsに移動
 
 
 test6.css
@@ -88,16 +77,7 @@ test6.js
 ・「送信」ボタンクリック時のテストプログラムを追加
 ・画像上の矢印が視覚情報を邪魔するので、カーソルが画像にのった場合のみ表示に変更
 
-問題点(2019/06/17)
-・swiper.min.jsプログラム内で、用意されたswiper-slideにそれぞれ特別なクラスを追加しているらしく、
-　初期swiper-slideの単純な複製を行っているせいで、うまくswiperが作れない
-　(ページの大きさを変更すると、正しくなる)
-　・理想複製後
-　　<div class="swiper-slide swiper-slide-active"> img1 </div>
-　　<div class="swiper-slide swiper-slide-next"> img2 </div>
-　　<div class="swiper-slide swiper-slide-active"> img3 </div>
-　・実際
-　　<div class="swiper-slide swiper-slide-active"> img1 </div>
-　　<div class="swiper-slide swiper-slide-active"> img2 </div>
-　　<div class="swiper-slide swiper-slide-active"> img3 </div>
+・(new)body部分のswiper宣言を移動
+・(new)div swiper-slideの複製後にswiper.update()でswiperを更新
+
 -->

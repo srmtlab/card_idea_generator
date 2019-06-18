@@ -1,6 +1,22 @@
 let cards = [];
 
 $(function(){
+
+
+	//一旦追加
+	let swiper = new Swiper('.swiper-container', {
+		effect: 'flip',
+		grabCursor: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+
 	
 	$.ajax({
 		type: "GET",
@@ -22,6 +38,8 @@ $(function(){
 				copy.clone().appendTo(".swiper-wrapper");
 				$(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
 			}
+
+			swiper.update();
 
 		},
 		function(){
@@ -64,5 +82,7 @@ $(function(){
 	});
 
 
+
 	
 });
+
