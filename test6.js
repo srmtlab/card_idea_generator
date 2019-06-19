@@ -81,7 +81,11 @@ $(function(){
 		},{duration:200});
 	});
 
-
+	// 
+	$.('.btn').on('click', function)(){
+		var parent = this.parent();
+		alert(parent.tagName);
+	}
 
 	
 });
