@@ -83,8 +83,9 @@ $(function(){
 
 	// 
 	$('.btn').on('click', function(){
-		var text = $(this).parent().siblings('.idea_div').children('textarea').text();
+		var text = $(this).parent().siblings('.idea_div').children('textarea').val();
 		alert(text);
+		// "textarea[name='idea']"
 	});
 
 	
