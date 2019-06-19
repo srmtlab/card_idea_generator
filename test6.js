@@ -83,8 +83,10 @@ $(function(){
 
 	// 
 	$('.btn').on('click', function(){
-		var text = this.closest(".swiper-wrapper").find('.idea_div').text();
+		var text = $(this).parent().siblings('.idea_div').text();
 		alert(text);
+		// var text = this.closest(".swiper-wrapper").find('.idea_div').text();
+		// alert(text);
 	});
 
 	
