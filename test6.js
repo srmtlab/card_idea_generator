@@ -83,7 +83,7 @@ $(function(){
 
 	// 
 	$('.btn').on('click', function(){
-		var text = $(this).parent().siblings('.idea_div').text();
+		var text = $(this).parent().siblings('.idea_div').children('textarea').text();
 		alert(text);
 	});
 
