@@ -167,13 +167,13 @@
     .container{
         overflow: hidden;
         width: 90vw;
-        height: 90vh;
+        height: 85vh;
         margin: 0 auto;
     }
 
     .swiper-container {
         width: 290px;
-        height: 420px;
+        height: 400px;
         margin: 0 auto;
     }
 
@@ -194,7 +194,7 @@
 
     .idea_div{
         width: 290px;
-        height: 80px;
+        height: 65px;
         margin: 0 auto;
     }
 
