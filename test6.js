@@ -82,10 +82,10 @@ $(function(){
 	});
 
 	// 
-	$.('.btn').on('click', function)(){
+	$('.btn').on('click', function(){
 		var parent = this.parent();
 		alert(parent.tagName);
-	}
+	});
 
 	
 });
