@@ -76,85 +76,8 @@
 
 }
 
+
 @media screen and (max-width: 767px){
-    body {
-    @background: #fff;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container{
-        overflow: hidden;
-        width: 90vw;
-        height: 90vh;
-        margin: 0 auto;
-    }
-
-    .swiper-container {
-        width: 290px;
-        height: 440px;
-        margin: 0 auto;
-    }
-
-    .swiper-wrapper {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .idea_div{
-        width: 290px;
-        height: 90px;
-        margin: 0 auto;
-    }
-
-    .idea_div textarea{
-        width: 98%;
-        height: 90%;
-        resize: none;
-    }
-
-    .btn_div{
-        width: 290px;
-        height: 40px;
-        margin: 0 auto;
-    }
-
-    .btn {
-        width: 47%;
-        display: inline-block;
-        padding: 0.5em 5.55em;
-        text-decoration: none;
-        background: #668ad8;/*ボタン色*/
-        color: #FFF;
-        border-bottom: solid 5px #627295;
-        border-radius: 5px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .btn:active {
-        /*ボタンを押したとき*/
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);/*下に動く*/
-        border-bottom: none;/*線を消す*/
-    }
-
-}
-
-@media screen and (max-width: 479px){
     body {
         @background: #fff;
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
