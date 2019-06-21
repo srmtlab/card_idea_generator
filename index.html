@@ -1,23 +1,84 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  
-  <title>JSON and AJAX</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="test6.js"></script>
+<meta charset="utf-8">
+<title>Card-Triggered Ideation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- js,css読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="test6.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="test6.css">
+
 </head>
 <body>
-  
-  <div>
-    <h1>JSON and AJAX</h1>
-    <input type="button" value="実行" class="btn">
+
+  <div class="container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <!-- このdivタグを画像ファイルの数だけ複製する -->
+        <div class="swiper-slide">
+          <img class="img" src="">
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- ボタンと意見入力部分を隔離 -->
+    <div class="idea_div">
+    カードに描かれた物をどう使いますか？
+      <textarea name="idea" placeholder="ここにアイデアを記入して下さい"></textarea>
+    </div>
+    <div class="btn_div">
+      <a href="#" class="btn">送信</a>
+    </div>
+
   </div>
+
   
-  <div class="favAnimalInfo">
-  	<!-- JSONデータを呼び出す場所 -->
-  </div>
-  
+  <script src="js/swiper.min.js"></script>
+
 </body>
 </html>
+
+<!-- 更新内容 20190618 -->
+<!--
+swiper_test.html
+修正内容が多くなってしまったのでここに内容を記述
+
+<head>部分
+・style部分をtest6.cssの外部ファイルに記述
+
+<body>部分
+・swiper-slideを1つ減らして計1つに
+・swiper部分から意見入力部分(textarea)とボタン(btn)をそれぞれ分離
+・textareaを内包するdiv idea_divを追加
+・btnを内包するdiv btn_divを追加
+・上に伴って、swiper-container、idea_div、btn_divのすべてを内包するdiv containerを追加
+
+・(new)body下の方にあったswiper宣言をtest6.jsに移動
+
+
+test6.css
+各クラスに設定を付与し形を整えた
+(かなり適当に設定しているので変更が必要かもしれない)
+
+
+test6.js
+・確認用プログラム(console.logなど)を一度全消去
+・変数宣言をvarからletに変更
+・div swiper-slideの複製プログラムの変更
+・複製プログラムをajax処理の中へ移動
+・「送信」ボタンクリック時のテストプログラムを追加
+・画像上の矢印が視覚情報を邪魔するので、カーソルが画像にのった場合のみ表示に変更
+
+・(new)body部分のswiper宣言を移動
+・(new)div swiper-slideの複製後にswiper.update()でswiperを更新
+
+-->
