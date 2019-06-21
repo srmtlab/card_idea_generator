@@ -58,7 +58,7 @@ $(function(){
 	$(".btn").on("click", function(){
 
 		//テスト用イベント#################
-		alert(cards[btn_i++].url);
+	        //alert(cards[btn_i++].url);
 		if(btn_i > cards.length - 1){
 			btn_i = 0;
 		}
@@ -90,8 +90,9 @@ $(function(){
 	// 
 	$('.btn').on('click', function(){
 	    let cardName = $(".swiper-slide-next").attr("cardname");
+	    let cardTitle = $(".swiper-slide-next").attr("cardtitle");
 	    let text = $(this).parent().siblings('.idea_div').children('textarea').val();
-	    alert("text: "+text+", cardName: "+cardName);
+	    alert("text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
 	    // "textarea[name='idea']"
 	});
 
