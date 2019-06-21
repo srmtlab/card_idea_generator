@@ -37,8 +37,10 @@ $(function(){
 			let copy = $(".swiper-slide");
 			for(let i = 0; i < cards.length - 1; i++){
 			    let clone = copy.clone();
-			    clone.attr("cardUrl", cards[i].url);
-			    clone.attr("cardTitle", cards[i].title);
+			    let cardName = cards[i].url.replace(/\.PNG$/i, "");
+			    cardName = cardName.replace(/^.+card/, "card");
+			    clone.attr("cardname", cardName);
+			    clone.attr("cardtitle", cards[i].title);
 			    clone.appendTo(".swiper-wrapper");
 			    $(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
 			}
@@ -87,9 +89,10 @@ $(function(){
 
 	// 
 	$('.btn').on('click', function(){
-		var text = $(this).parent().siblings('.idea_div').children('textarea').val();
-		alert(text);
-		// "textarea[name='idea']"
+	    let cardName = $(".swiper-slide-next").attr("cardname");
+	    let text = $(this).parent().siblings('.idea_div').children('textarea').val();
+	    alert(text);
+	    // "textarea[name='idea']"
 	});
 
 	
