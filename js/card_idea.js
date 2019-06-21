@@ -19,9 +19,10 @@ $(function(){
 
 	
 	$.ajax({
-		type: "GET",
-		url: "cards_ex.json",
-		dataType: "json"
+	    type: "GET",
+	    url: "cards_ex.json",
+	    cache: false,
+	    dataType: "json"
 	})
 	.then(
 		function(json){
