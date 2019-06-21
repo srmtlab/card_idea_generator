@@ -91,7 +91,7 @@ $(function(){
 	$('.btn').on('click', function(){
 	    let cardName = $(".swiper-slide-next").attr("cardname");
 	    let text = $(this).parent().siblings('.idea_div').children('textarea').val();
-	    alert(text);
+	    alert("text: "+text+", cardName: "+cardName);
 	    // "textarea[name='idea']"
 	});
 
