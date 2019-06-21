@@ -67,6 +67,7 @@
     .idea_div textarea {
         width: 98%;
         height: 90%;
+	overflow: auto;
         resize: none;
     }
 
