@@ -44,6 +44,11 @@
         opacity: 0;
     }
 
+    .notice {
+	font-size: x-small;
+	font-color: #900;
+    }
+    
     .idea_div {
         width: 290px;
         height: 90px;
@@ -169,4 +174,5 @@
         border-bottom: none;/*線を消す*/
     }
 
+    
 }
