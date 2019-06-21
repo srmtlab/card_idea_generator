@@ -32,11 +32,15 @@ $(function(){
 				});
 			}
 
-			$(".img").attr("src", cards[0].url);
+		    $(".img").attr("src", cards[0].url);
+		    cards[0].url.substr();
 			let copy = $(".swiper-slide");
 			for(let i = 0; i < cards.length - 1; i++){
-				copy.clone().appendTo(".swiper-wrapper");
-				$(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
+			    let clone = copy.clone();
+			    clone.attr("cardUrl", cards[i].url);
+			    clone.attr("cardTitle", cards[i].title);
+			    clone.appendTo(".swiper-wrapper");
+			    $(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
 			}
 
 			swiper.update();
