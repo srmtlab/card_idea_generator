@@ -17,7 +17,7 @@
 
     .swiper-container {
         width: 290px;
-        height: 440px;
+        height: 420px;
         margin: 0 auto;
     }
 
@@ -58,7 +58,7 @@
 	font-color: $b00;
     }
 
-    #thx_msg{
+    #thx_msg {
       display: none; 
     }
     
