@@ -25,33 +25,41 @@ $(function(){
 	    dataType: "json"
 	})
 	.then(
-		function(json){
-			for(let i = 0; i < json.length; i++) {
-				cards.push({
-					"url": json[i].url,
-					"title": json[i].title
-				});
-			}
-
-		    $(".img").attr("src", cards[0].url);
-		    cards[0].url.substr();
-			let copy = $(".swiper-slide");
-			for(let i = 0; i < cards.length - 1; i++){
-			    let clone = copy.clone();
-			    let cardName = cards[i].url.replace(/\.PNG$/i, "");
-			    cardName = cardName.replace(/^.+card/, "card");
-			    clone.attr("cardname", cardName);
-			    clone.attr("cardtitle", cards[i].title);
-			    clone.appendTo(".swiper-wrapper");
-			    $(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
-			}
-
-			swiper.update();
-
-		},
-		function(){
-			alert("error:ファイルの読み込みに失敗");
+	    function(json){
+		for(let i = 0; i < json.length; i++) {
+		    cards.push({
+			"url": json[i].url,
+			"title": json[i].title
+		    });
 		}
+		
+		// カードをランダムにシャッフル
+		for(var i = cards.length - 1; i > 0; i--){
+		    var r = Math.floor(Math.random() * (i + 1));
+		    var tmp = cards[i];
+		    cards[i] = cards[r];
+		    cards[r] = tmp;
+		}
+		    
+		$(".img").attr("src", cards[0].url);
+		cards[0].url.substr();
+		let copy = $(".swiper-slide");
+		for(let i = 0; i < cards.length - 1; i++){
+		    let clone = copy.clone();
+		    let cardName = cards[i].url.replace(/\.PNG$/i, "");
+		    cardName = cardName.replace(/^.+card/, "card");
+		    clone.attr("cardname", cardName);
+		    clone.attr("cardtitle", cards[i].title);
+		    clone.appendTo(".swiper-wrapper");
+		    $(".img:eq(" + (i + 1) + ")").attr("src", cards[i + 1].url);
+		}
+		
+		swiper.update();
+		
+	    },
+	    function(){
+		alert("error:ファイルの読み込みに失敗");
+	    }
 	);
 
 	//「送信」ボタンクリック時のイベント
