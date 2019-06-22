@@ -1,14 +1,14 @@
 [
-	{"url":"./img/card01.PNG", "title":"オントロジー"},
-	{"url":"./img/card02.PNG", "title":"ロボット工学"},
-	{"url":"./img/card03.PNG", "title":"インターネット"},
-	{"url":"./img/card04.PNG", "title":"IoT"},
-	{"url":"./img/card05.PNG", "title":"HAI"},
-	{"url":"./img/card06.PNG", "title":"画像認識"},
-	{"url":"./img/card07.PNG", "title":"自然言語処理"},
-	{"url":"./img/card08.PNG", "title":"対話システム"},
-	{"url":"./img/card09.PNG", "title":"マルチエージェントシステム"},
-	{"url":"./img/card10.PNG", "title":"ディープラーニング"},
-	{"url":"./img/card11.PNG", "title":"SNS"},
-	{"url":"./img/card12.PNG", "title":"ドローン"}
+	{"url":"../img/card01.PNG", "title":"オントロジー"},
+	{"url":"../img/card02.PNG", "title":"ロボット工学"},
+	{"url":"../img/card03.PNG", "title":"インターネット"},
+	{"url":"../img/card04.PNG", "title":"IoT"},
+	{"url":"../img/card05.PNG", "title":"HAI"},
+	{"url":"../img/card06.PNG", "title":"画像認識"},
+	{"url":"../img/card07.PNG", "title":"自然言語処理"},
+	{"url":"../img/card08.PNG", "title":"対話システム"},
+	{"url":"../img/card09.PNG", "title":"マルチエージェントシステム"},
+	{"url":"../img/card10.PNG", "title":"ディープラーニング"},
+	{"url":"../img/card11.PNG", "title":"SNS"},
+	{"url":"../img/card12.PNG", "title":"ドローン"}
 ]
