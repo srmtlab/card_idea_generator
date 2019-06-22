@@ -100,11 +100,14 @@ $(function(){
 	    let cardName = $(".swiper-slide-next").attr("cardname");
 	    let cardTitle = $(".swiper-slide-next").attr("cardtitle");
 	    let text = $('textarea#idea').val();
-	    alert("text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
+	    let theme = $('select[name=theme]').val();
+	    alert("theme: "+theme+ ",text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
+	    
 	    $.ajax({
 		type: "GET",
 		url: "http://radish.ics.nitech.ac.jp/api/insert_idea.cgi",
 		data: {
+		    theme: theme,
 		    cardName: cardName,
 		    cardTitle: cardTitle,
 		    idea: text
