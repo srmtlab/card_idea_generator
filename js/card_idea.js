@@ -108,13 +108,13 @@ $(function(){
 		url: "http://radish.ics.nitech.ac.jp/api/insert_idea.cgi",
 		cache: false,
 		data: {
-		    "card-name": cardName,
-		    "card-title": cardTitle,
-		    "idea": text
+		    cardName: cardName,
+		    cardTitle: cardTitle,
+		    idea: text
 		}
 	    }).then(
 		function(json){		    
-		    
+		    alert("OK");
 		},
 		function(){
 		    alert("Failed to insert idea.");
