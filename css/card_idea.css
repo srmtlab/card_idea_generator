@@ -68,7 +68,8 @@
 	font-weight: bold;
 	background: #fdd;
 	text-align: center;
-	height: 36px;
+	height: 30px;
+	line-height: 30px;
     }
     
     .idea_div {
