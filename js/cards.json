@@ -1,5 +1,5 @@
 {
-    cards:[
+    "cards":[
 	{"url":"./img/card01.png", "title":"オントロジー"},
 	{"url":"./img/card02.png", "title":"ロボット工学"},
 	{"url":"./img/card03.png", "title":"インターネット"},
@@ -23,7 +23,7 @@
 	{"url":"./img/card21.png", "title":"隠岐ジオパーク"},
 	{"url":"./img/card22.png", "title":"松江高専"},
 	{"url":"./img/card23.png", "title":"島根大学"}],
-    themes:["「三方良し」の学校教育×地域コミュニティ",
+    "themes":["「三方良し」の学校教育×地域コミュニティ",
 	    "「地域に根差し還元する教育」のためには？",
 	    "AIで関係人口を増やす！"]
 }
