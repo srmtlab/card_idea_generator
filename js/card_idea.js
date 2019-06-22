@@ -101,7 +101,7 @@ $(function(){
 	    let cardTitle = $(".swiper-slide-next").attr("cardtitle");
 	    let text = $('textarea#idea').val();
 	    let theme = $('select[name=theme]').val();
-	    alert("theme: "+theme+ ",text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
+	    //alert("theme: "+theme+ ",text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
 	    
 	    $.ajax({
 		type: "GET",
@@ -113,8 +113,10 @@ $(function(){
 		    idea: text
 		}
 	    }).then(
-		function(data){		    
-		    alert("OK");
+		function(data) {
+		    $('#thx_msg').fadeIn("slow", function () {
+			$(this).delay(2000).fadeOut("slow");
+		    });
 		},
 		function(){
 		    alert("Failed to insert idea.");
