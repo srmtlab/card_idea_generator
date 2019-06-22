@@ -20,7 +20,7 @@ $(function(){
 	
 	$.ajax({
 	    type: "GET",
-	    url: "cards_ex.json",
+	    url: "cards.json",
 	    cache: false,
 	    dataType: "json"
 	})
