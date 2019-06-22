@@ -1,4 +1,5 @@
 let cards = [];
+let themes = [];
 
 $(function(){
 
@@ -24,12 +25,26 @@ $(function(){
 	    cache: false,
 	    dataType: "json"
 	}).then(
-	    function(json){
+	    function(data){
+		cards = data.cards;
+		themes = data.themes;
+		/*
 		for(let i = 0; i < json.length; i++) {
 		    cards.push({
 			"url": json[i].url,
 			"title": json[i].title
 		    });
+		}
+		*/
+
+		for(let i = 0; i < themes.length - 1; i++){
+		    let opt = $(".theme_opt");
+		    if (i != 0) {
+			opt = opt.clone();
+			opt.appendTo($("select[name=theme]"))
+		    }
+		    opt.text(themes[i]);
+		    opt.attr("value",themes[i]);
 		}
 		
 		// カードをランダムにシャッフル
@@ -54,7 +69,6 @@ $(function(){
 		}
 		
 		swiper.update();
-		
 	    },
 	    function(){
 		alert("error:ファイルの読み込みに失敗");
