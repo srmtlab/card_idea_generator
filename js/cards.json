@@ -1,0 +1,14 @@
+[
+	{"url":"./img/card01.png", "title":"オントロジー"},
+	{"url":"./img/card02.png", "title":"ロボット工学"},
+	{"url":"./img/card03.png", "title":"インターネット"},
+	{"url":"./img/card04.png", "title":"IoT"},
+	{"url":"./img/card05.png", "title":"HAI"},
+	{"url":"./img/card06.png", "title":"画像認識"},
+	{"url":"./img/card07.png", "title":"自然言語処理"},
+	{"url":"./img/card08.png", "title":"対話システム"},
+	{"url":"./img/card09.png", "title":"マルチエージェントシステム"},
+	{"url":"./img/card10.png", "title":"ディープラーニング"},
+	{"url":"./img/card11.png", "title":"SNS"},
+	{"url":"./img/card12.png", "title":"ドローン"}
+]
