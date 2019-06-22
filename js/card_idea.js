@@ -28,18 +28,9 @@ $(function(){
 	    function(data){
 		cards = data.cards;
 		themes = data.themes;
-		/*
-		for(let i = 0; i < json.length; i++) {
-		    cards.push({
-			"url": json[i].url,
-			"title": json[i].title
-		    });
-		}
-		*/
-
-		for(let i = 0; i < themes.length - 1; i++){
+		for(let i = 0; i < themes.length; i++){
 		    let opt = $(".theme_opt");
-		    if (i != 0) {
+		    if (i > 0) {
 			opt = opt.clone();
 			opt.appendTo($("select[name=theme]"))
 		    }
