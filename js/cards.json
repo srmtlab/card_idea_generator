@@ -1,14 +1,26 @@
 [
-	{"url":"./img/card01.png", "title":"オントロジー"},
-	{"url":"./img/card02.png", "title":"ロボット工学"},
-	{"url":"./img/card03.png", "title":"インターネット"},
-	{"url":"./img/card04.png", "title":"IoT"},
-	{"url":"./img/card05.png", "title":"HAI"},
-	{"url":"./img/card06.png", "title":"画像認識"},
-	{"url":"./img/card07.png", "title":"自然言語処理"},
-	{"url":"./img/card08.png", "title":"対話システム"},
-	{"url":"./img/card09.png", "title":"マルチエージェントシステム"},
-	{"url":"./img/card10.png", "title":"ディープラーニング"},
-	{"url":"./img/card11.png", "title":"SNS"},
-	{"url":"./img/card12.png", "title":"ドローン"}
+    {"url":"./img/card01.png", "title":"オントロジー"},
+    {"url":"./img/card02.png", "title":"ロボット工学"},
+    {"url":"./img/card03.png", "title":"インターネット"},
+    {"url":"./img/card04.png", "title":"IoT"},
+    {"url":"./img/card05.png", "title":"HAI"},
+    {"url":"./img/card06.png", "title":"画像認識"},
+    {"url":"./img/card07.png", "title":"自然言語処理"},
+    {"url":"./img/card08.png", "title":"対話システム"},
+    {"url":"./img/card09.png", "title":"マルチエージェントシステム"},
+    {"url":"./img/card10.png", "title":"ディープラーニング"},
+    {"url":"./img/card11.png", "title":"SNS"},
+    {"url":"./img/card12.png", "title":"ドローン"}
+    {"url":"./img/card13.png", "title":"IT技術者"}
+    {"url":"./img/card14.png", "title":"不昧公のお茶文化"}
+    {"url":"./img/card15.png", "title":"高校"}
+    {"url":"./img/card16.png", "title":"松江城"}
+    {"url":"./img/card17.png", "title":"宍道湖"}
+    {"url":"./img/card18.png", "title":"空き家"}
+    {"url":"./img/card19.png", "title":"ホーランエンヤ"}
+    {"url":"./img/card20.png", "title":"みしまや"}
+    {"url":"./img/card21.png", "title":"隠岐ジオパーク"}
+    {"url":"./img/card22.png", "title":"松江高専"}
+    {"url":"./img/card23.png", "title":"島根大学"}
+    
 ]
