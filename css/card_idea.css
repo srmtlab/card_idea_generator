@@ -1,4 +1,4 @@
-#the@media screen and (min-width: 767px) {
+@media screen and (min-width: 767px) {
     body {
         background: #fff;
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -59,7 +59,7 @@
     }
 
     #thx_msg {
-      display: none; 
+	display: none;
     }
     
     .idea_div {
