@@ -60,6 +60,10 @@
 
     #thx_msg {
 	display: none;
+	position: relative;
+	top: -200px;
+	left: 20px;
+	z-index: 1;
     }
     
     .idea_div {
