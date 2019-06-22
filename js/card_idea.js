@@ -23,8 +23,7 @@ $(function(){
 	    url: "./js/cards.json",
 	    cache: false,
 	    dataType: "json"
-	})
-	.then(
+	}).then(
 	    function(json){
 		for(let i = 0; i < json.length; i++) {
 		    cards.push({
@@ -101,25 +100,24 @@ $(function(){
 	    let cardName = $(".swiper-slide-next").attr("cardname");
 	    let cardTitle = $(".swiper-slide-next").attr("cardtitle");
 	    let text = $('textarea#idea').val();
-	    //alert("text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
-
+	    alert("text: "+text+", cardName: "+cardName+", cardTitle: "+cardTitle);
 	    $.ajax({
 		type: "GET",
 		url: "http://radish.ics.nitech.ac.jp/api/insert_idea.cgi",
-		cache: false,
 		data: {
 		    cardName: cardName,
 		    cardTitle: cardTitle,
 		    idea: text
 		}
 	    }).then(
-		function(json){		    
+		function(data){		    
 		    alert("OK");
 		},
 		function(){
 		    alert("Failed to insert idea.");
 		}
 	    );
+	    
 	    
 	});
     
