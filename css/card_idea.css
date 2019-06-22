@@ -64,6 +64,8 @@
 	top: -200px;
 	left: 20px;
 	z-index: 1;
+	font-color: #a00;
+	font-weight: bold;
     }
     
     .idea_div {
